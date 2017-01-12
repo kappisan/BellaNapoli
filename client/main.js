@@ -31,12 +31,16 @@ app.controller('ordersCtrl', function($scope, $rootScope, $http) {
     
     console.log("orders controller")
 
+    $rootScope.orders = [];
+
     $http({
         method: 'GET',
         url: '/api/getOrders'
     }).then(function successCallback(response) {
     
         console.log("got order", response);
+
+        $scope.orders = response.data;
                     
     }, function errorCallback(response) { console.log("error", response); });
 

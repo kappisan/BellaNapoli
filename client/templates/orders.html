@@ -1,1 +1,9 @@
-orders html
+<h1>orders</h1>
+<hr>
+<div ng-repeat="order in orders">
+	<p>{{ order.user }}</p>
+	<p>{{ order.date }}</p>	
+	<p>{{ order.time }}</p>
+	<p ng-repeat="item in order.order"> - {{ item }}</p>
+	<hr>
+</div>

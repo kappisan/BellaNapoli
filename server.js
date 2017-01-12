@@ -19,9 +19,17 @@ app.use(bodyParser.urlencoded({
 }));
 
 
+var orders = [
+	{ 
+		user: "bob", 
+		order: ["margerita", "pepperoni", "onion rings"],
+		date: "12-Jan-2017",
+		time: "12:22:34"
+	}
+];
+
 
 /* api */
-var startDate = moment("01-Jan-14", "DD-MMM-YY");
 
 app.get('/api/getOrders', function(req, res) {  
 
@@ -29,7 +37,7 @@ app.get('/api/getOrders', function(req, res) {
 
 	console.log("get order at ", now)
 	
-	res.send(now);
+	res.send(orders);
 });
 
 
@@ -53,4 +61,4 @@ server.listen(PORT);
 var host = server.address().address
 var port = server.address().port
 
-console.log("stock simulator server listening on port %s", port);
+console.log("bella napoli server listening on port %s", port);
