@@ -11,7 +11,7 @@ var numeral = require('numeral');
 var _ = require('underscore');
 var MongoClient = require('mongodb').MongoClient;
 
-app.use(express.static(__dirname + '/client'));  
+app.use(express.static(__dirname + '/'));  
 
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({
@@ -21,10 +21,12 @@ app.use(bodyParser.urlencoded({
 
 var orders = [
 	{ 
+		id: "abc1234",
 		user: "bob", 
 		order: ["margerita", "pepperoni", "onion rings"],
 		date: "12-Jan-2017",
-		time: "12:22:34"
+		time: "12:22:34",
+		status: "preparing"
 	}
 ];
 
@@ -48,6 +50,13 @@ app.post('/api/makeOrder', function(req, res) {
 	console.log("now", now);
 	console.log("user", req.body.user);
 	console.log("pizza ", req.body.pizza);
+
+	orders.push({ 
+		user: "barry", 
+		order: ["margerita", "pepperoni", "onion rings"],
+		date: "12-Jan-2017",
+		time: "12:22:34"
+	});
 
 	res.send("order successfully placed at" + now);
 });
