@@ -1,19 +1,26 @@
-<center><h1>menu</h1></center>
+<center>
+<h1>menu</h1>
+<div class="menu-container">
+	
+	<div class="menu-block red-border">
+		<center><h2 class="green">Chicken</h2></center>
+		<div ng-repeat="item in menu.chicken" class="item">
+			<p ng-click="addToOrder(item)"><strong>{{ displayPrice(item.price / 100) }}</strong> - {{ item.name }} </p>	
+		</div>
+	</div>
 
-<h2>Chicken</h2>
+	<div class="menu-block green-border">
+		<center><h2>Kids Menu</h2></center>
+		<div ng-repeat="item in menu.kids" class="item">
+ 			<p ng-click="addToOrder(item)"><strong>{{ displayPrice(item.price / 100) }}</strong> - {{ item.name }} </p>	
+		</div>
+	</div>
 
-<div ng-repeat="item in menu.chicken">
-	<p><strong ng-click="addToOrder(item)">Add</strong> - <strong>{{ displayPrice(item.price / 100) }}</strong> - {{ item.name }} </p>	
+	<div class="menu-block red-border">
+		<center><h2 class="green">Starters</h2></center>
+		<div ng-repeat="item in menu.starters" class="item">
+			<p ng-click="addToOrder(item)"><strong>{{ displayPrice(item.price / 100) }}</strong> - {{ item.name }} </p>	
+		</div>
+	</div>
 </div>
-
-<h2>Kids Menu</h2>
-
-<div ng-repeat="item in menu.kids">
-	<p><strong ng-click="addToOrder(item)">Add</strong> - <strong>{{ displayPrice(item.price / 100) }}</strong> - {{ item.name }} </p>	
-</div>
-
-<h2>Starters</h2>
-
-<div ng-repeat="item in menu.starters">
-	<p><strong ng-click="addToOrder(item)">Add</strong> - <strong>{{ displayPrice(item.price / 100) }}</strong> - {{ item.name }} </p>	
-</div>
+</center>

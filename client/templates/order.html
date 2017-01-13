@@ -1,10 +1,11 @@
-<center><h1>order</h1></center>
-<hr>
-<div ng-repeat="item in order">
-	<p>{{ item.name }}</p>
-	<p>{{ item.price }}</p>	
-	<br>
+<center>
+<div class="menu-block green-border">
+	<h1>order</h1>
+	<div ng-repeat="item in order">
+			<p><strong>{{ displayPrice(item.price / 100) }}</strong> - {{ item.name }} </p>	
+	</div>
 </div>
-
+</center>
+<br>
 Name: <input type="text" ng-model="fullName"><br><br>
 <button ng-click="submitOrder()">Submit Order</button>

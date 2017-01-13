@@ -1,14 +1,104 @@
+@font-face {
+    font-family: coolvetica;
+    src: url(./coolvetica.ttf);
+}
+
 html {
 	background-color: #fff;
 }
 
+h1, h2, h3, h4, h5 {
+	font-family: coolvetica;
+	color: #ee1d23;
+}
+
+p {
+	font-family: helvetica;
+}
+
+a {
+	text-decoration: none;
+	font-family: helvetica;
+}
 
 .my-order {
 	position: relative;
-	width: 200px;
-	float: right;
+    width: 200px;
+    float: right;
+    font-family: helvetica;
+    color: #118217;
+    font-weight: bold;
+    text-align: left;
 }
 
 #header-bar {
-	height: 60px;
+	height: 70px;
+    position: fixed;
+    width: 100%;
+    background: #eeeeee;
+    left: 0;
+    right: 0;
+    top: 0;
+    border-bottom: #118217;
+    border-style: solid;
+    border-top: 0;
+    border-left: 0;
+    border-right: 0;
+}
+
+#header-bar a {
+	color: #f70c13;
+    margin: 20px 50px;
+}
+
+.nav-links {
+    font-size: 28px;
+    top: 15px;
+    position: relative;
+}
+
+#container {
+	margin-top: 100px;
+}
+
+
+
+
+/* menu */
+
+
+.menu-block {
+	display: inline-block;
+	border-style: dashed;
+	margin: 10px;
+	padding: 1px 20px;
+    width: 1500px;
+}
+
+.menu-block div {
+	width: 500px;
+	display: inline-block;
+	text-align: left;
+}
+
+.menu-container {
+	display: inline-block;
+}
+
+.red-border {
+	border-color: #ee1d23;
+}
+.red {
+	color: #ee1d23;	
+}
+.green-border {
+	border-color: #075c09;
+}
+.green {
+	color: #075c09;	
+}
+
+.item p:hover {
+	cursor: pointer;
+	color: #075c09;	
 }
