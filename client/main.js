@@ -89,4 +89,8 @@ app.controller('mainCtrl', function($scope, $rootScope) {
     $rootScope.totalPrice = 0;
     $rootScope.order = [];
 
+    $rootScope.displayPrice = function(price) {
+        return '£' + numeral(price).format('0,0.00')
+    }
+
 });

@@ -3,17 +3,17 @@
 <h2>Chicken</h2>
 
 <div ng-repeat="item in menu.chicken">
-	<p><strong ng-click="addToOrder(item)">Add</strong> - <strong>{{ item.price }}</strong> - {{ item.name }} </p>	
+	<p><strong ng-click="addToOrder(item)">Add</strong> - <strong>{{ displayPrice(item.price / 100) }}</strong> - {{ item.name }} </p>	
 </div>
 
 <h2>Kids Menu</h2>
 
 <div ng-repeat="item in menu.kids">
-	<p><strong ng-click="addToOrder(item)">Add</strong> - <strong>{{ item.price }}</strong> - {{ item.name }} </p>	
+	<p><strong ng-click="addToOrder(item)">Add</strong> - <strong>{{ displayPrice(item.price / 100) }}</strong> - {{ item.name }} </p>	
 </div>
 
 <h2>Starters</h2>
 
 <div ng-repeat="item in menu.starters">
-	<p><strong ng-click="addToOrder(item)">Add</strong> - <strong>{{ item.price }}</strong> - {{ item.name }} </p>	
+	<p><strong ng-click="addToOrder(item)">Add</strong> - <strong>{{ displayPrice(item.price / 100) }}</strong> - {{ item.name }} </p>	
 </div>
