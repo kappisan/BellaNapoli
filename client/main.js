@@ -3,7 +3,7 @@ var app = angular.module('bellaNapoliApp', ['ngRoute'])
         $routeProvider
             .when('/', { templateUrl: 'templates/home.html', controller: "homeCtrl" })  
             .when('/menu', { templateUrl: 'templates/menu.html', controller: "menuCtrl" })
-            .when('/orders', { templateUrl: 'templates/orders.html', controller: "ordersCtrl" })
+            .when('/order', { templateUrl: 'templates/order.html', controller: "orderCtrl" })
             .otherwise({ redirectTo: '/' });
     }]);
 
@@ -27,30 +27,66 @@ app.controller('homeCtrl', function($scope, $rootScope, $http) {
     }
 });
 
-app.controller('ordersCtrl', function($scope, $rootScope, $http) {
+app.controller('orderCtrl', function($scope, $rootScope, $http) {
     
-    console.log("orders controller")
+    console.log("order controller")
 
-    $rootScope.orders = [];
+    $scope.submitOrder = function() {
+
+        console.log("submitting order for", $scope.fullName);
+
+        var data = JSON.stringify({
+                user: $scope.fullName,
+                pizza: "pizza",
+                order: $rootScope.order
+            });
+        $http.post("/api/makeOrder", data).success(function(data, status) {
+
+            console.log("made order", data);
+        })
+    }
+
+});
+
+
+app.controller('menuCtrl', function($scope, $rootScope, $http) {
+    console.log("menu controller");
+
+    $scope.menu = {};
 
     $http({
         method: 'GET',
-        url: '/api/getOrders'
+        url: '/api/getMenu'
     }).then(function successCallback(response) {
     
         console.log("got order", response);
 
-        $scope.orders = response.data;
+        $scope.menu = response.data;
                     
     }, function errorCallback(response) { console.log("error", response); });
 
-});
+    $scope.addToOrder = function(item) {
+        console.log("add item to order", item);
+        $rootScope.order.push(item);
+        $rootScope.totalItems = $rootScope.order.length;
+
+        var priceTotal = 0;
+
+        $rootScope.order.forEach(function(itm) {
+            priceTotal += itm.price;
+        })
 
 
-app.controller('menuCtrl', function($scope, $rootScope) {
-    console.log("menu controller")
+        $rootScope.totalPrice = priceTotal;
+    } 
+
 });
 
 app.controller('mainCtrl', function($scope, $rootScope) {
-    console.log("menu controller")
+    console.log("menu controller");
+
+    $rootScope.totalItems = 0;
+    $rootScope.totalPrice = 0;
+    $rootScope.order = [];
+
 });

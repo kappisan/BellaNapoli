@@ -1,3 +1,14 @@
 html {
-	background-color: #eee;
+	background-color: #fff;
+}
+
+
+.my-order {
+	position: relative;
+	width: 200px;
+	float: right;
+}
+
+#header-bar {
+	height: 60px;
 }

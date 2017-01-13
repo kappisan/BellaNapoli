@@ -10,6 +10,7 @@
     <script src="./libs/numeral.min.js"></script>
     <script src="./libs/moment.js"></script>
     <script src="./libs/angular-route.min.js"></script>
+    <script src="./libs/underscore.js"></script>
 
     <script src="./libs/d3.v3.min.js"></script>
 
@@ -18,14 +19,23 @@
 </head>
 <body ng-app="bellaNapoliApp" ng-controller="mainCtrl">
 
-<div >
+    <div id="header-bar">
+        <a href="#/">Home</a>
+        <a href="#/menu">Menu</a>
+        <div class="my-order">
+            Total Items: {{ totalItems }}<br>
+            Total Price: {{ totalPrice }}<br>
+            <a href="#/order">view order</a>
+        </div>
+    </div>
+    <hr>
 
-    <div id="container" ng-view></div>
+    <div>
+        <div id="container" ng-view></div>
+    </div>
 
-</div>
 
-
-<script src="./main.js"></script>
+    <script src="./main.js"></script>
 
 </body>
 </html>
