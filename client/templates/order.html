@@ -1,11 +1,43 @@
-<center>
-<div class="menu-block green-border">
-	<h1>order</h1>
-	<div ng-repeat="item in order">
-			<p><strong>{{ displayPrice(item.price / 100) }}</strong> - {{ item.name }} </p>	
+<!-- if order, show order -->
+<center ng-if="!orderSuccess && totalItems != 0">
+	<div class="menu-block green-border">
+		<h1>order</h1>
+		<div ng-repeat="item in order">
+				<p><strong>{{ displayPrice(item.price / 100) }}</strong> - {{ item.name }} </p>	
+		</div>
 	</div>
-</div>
+
+	<div class="menu-block red-border">
+
+		<h1>Your Details</h1>
+
+		<p class="placeholder">Name:</p> 
+		<input type="text" ng-model="fullName" placeholder="name">
+		
+		<p class="placeholder">Address:</p> 
+		<input type="text" ng-model="address" placeholder="address">
+		
+		<p class="placeholder">Post Code:</p> 
+		<input type="text" ng-model="postCode" placeholder="post code">
+		
+		<p class="placeholder">Phone Number:</p> 
+		<input type="text" ng-model="phoneNumber" placeholder="phone number">
+		
+		<br><button ng-click="submitOrder()">Submit Order</button><br>
+	</div>
 </center>
-<br>
-Name: <input type="text" ng-model="fullName"><br><br>
-<button ng-click="submitOrder()">Submit Order</button>
+
+<!-- if successfully ordered -->
+<center ng-if="orderSuccess">
+	<div class="menu-block green-border">
+		<h1>order</h1>
+		<div ng-repeat="item in order">
+				<p><strong>{{ displayPrice(item.price / 100) }}</strong> - {{ item.name }} </p>	
+		</div>
+	</div>
+</center>
+
+<!-- if order empty -->
+<center ng-if="totalItems == 0">
+	<h1>Nothing to order</h1>
+</center>
