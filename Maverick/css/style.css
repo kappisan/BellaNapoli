@@ -784,6 +784,9 @@ Projects
   text-align: center;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background-color: rgba(211, 211, 211, 0.4);
+}
+
 }
 .cd-project-title::after {
   /* line below project title */
