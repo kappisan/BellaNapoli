@@ -23,9 +23,9 @@ var braintree = require("braintree");
 
 var gateway = braintree.connect({
   environment: braintree.Environment.Sandbox,
-  merchantId: "useYourMerchantId",
-  publicKey: "useYourPublicKey",
-  privateKey: "useYourPrivateKey"
+  merchantId: "cgd9bx8qtknfr4p3",
+  publicKey: "35n9hnhzhhwdnvnp",
+  privateKey: "MIIBCgKCAQEAv7ciWFbDUBTGHSPqab8YPcMRREUHcshKbsgl4MhtpNDhIOWxwsEeDUF283/BXtIFwOAaScF2bReUWP5LKUk4WB4WNXk+JYVRsAmEvxVYQZhpDo6Xj8+Y6wZCHq4mlz+xYuGNwCodOETe4iPQ/E5HzhDO/DZdXiQ3JTEK3xpQ0p/TxTses8WPUNpOvmqqI3j17jptXE1xHKiGkJcEBijP8UPhZZnc7mhZVZwldnY+N9ozPYK/XgVqSTMeJbVjTd4VeQtbAsFwVGhZ31Av8ViN8TQX+b2koWnf0NiJnrFJVOBPmEGwBXoDeuA4xF4bjRWq5NTSxvY9zuW7XFvgXxioHwIDAQAB"
 });
 
 
@@ -164,6 +164,12 @@ var starters = [
 
 
 /* api */
+
+app.get("/client_token", function (req, res) {
+	gateway.clientToken.generate({}, function (err, response) {
+		res.send(response.clientToken);
+	});
+});
 
 app.get('/api/getMenu', function(req, res) {  
 
