@@ -18,14 +18,22 @@
 </head>
 <body ng-app="bellaNapoliApp" ng-controller="mainCtrl">
 
-<div >
+    <div id="header-bar">
+        <a href="#/" class="nav-links cool">Home</a>
+        <a href="#/menu" class="nav-links cool">Menu</a>
+        <a href="#/orders" class="nav-links cool">Orders</a>
+        <div class="my-order">
+            Total Orders: 8<br>
+        </div>
+    </div>
 
-    <div id="container" ng-view></div>
-
-</div>
 
 
-<script src="./main.js"></script>
+    <div >
+        <div id="container" ng-view></div>
+    </div>
+
+    <script src="./main.js"></script>
 
 </body>
 </html>

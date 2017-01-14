@@ -4,9 +4,14 @@ var app = angular.module('bellaNapoliApp', ['ngRoute'])
             .when('/', { templateUrl: 'templates/home.html', controller: "homeCtrl" })  
             .when('/menu', { templateUrl: 'templates/menu.html', controller: "menuCtrl" })
             .when('/orders', { templateUrl: 'templates/orders.html', controller: "ordersCtrl" })
+            .when('/historic', { templateUrl: 'templates/historicOrders.html', controller: "historicOrdersCtrl" })
             .otherwise({ redirectTo: '/' });
     }]);
 
+
+app.controller('historicOrdersCtrl', function($scope, $rootScope, $http) {
+    console.log("historic orders controller")
+});
 
 app.controller('homeCtrl', function($scope, $rootScope, $http) {
     console.log("home controller")
