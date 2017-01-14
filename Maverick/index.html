@@ -1,0 +1,407 @@
+<!doctype html>
+<html lang="en" class="no-js">
+<head>
+	
+
+	<link href='http://fonts.googleapis.com/css?family=PT+Sans:400,700|Merriweather:400italic,400' rel='stylesheet' type='text/css'>
+
+	<link rel="stylesheet" href="css/reset.css">
+	<link rel="stylesheet" href="css/style.css">
+
+	
+
+	<script src="js/modernizr.js"></script>
+  	
+    <link rel='shortcut icon' href='./img/logo5.png'>
+
+ 
+    <script type="text/javascript" src="./libs/d3.min.js"></script>
+    <script type="text/javascript" src="./libs/angular.min.js"></script>
+	<script src="./libs/topojson.v1.min.js"></script>
+	<script src="js/jquery-2.1.1.js"></script>
+
+    <script type="text/javascript" src="./libs/rainbow-custom.min.js"></script>
+    <script src="./libs/language/css.js"></script>
+
+	<title>Bella Napoli</title>
+
+	<style type="text/css">
+
+		.svgmap, #map-container {
+			background-color: #fff;
+		}
+
+		path:hover {
+			fill: rgba(8, 81, 156, 0.2);
+			cursor:pointer;
+		}
+
+		.blog-title {
+			color: #ffffff;
+		}
+
+	</style>
+
+</head>
+<body ng-app="myApp" ng-init="firstName='Kasper Wilkosz'" ng-controller="pageController">
+
+<div class="title-banner" id="heading-title" onclick="clickTitle()">
+	<img class="logo96" src="./img/logo5.png"><h2 class="title-bar-heading">Bella Napoli</a> </h2>
+</div>
+
+<div>
+	<a id="hamburger" class="cd-nav-trigger cd-text-replace" href="#primary-nav" onclick="makeTitleWhite()">Menu<span aria-hidden="true" class="cd-icon"></span></a>
+	
+	<div class="cd-projects-container">
+		<ul class="cd-projects-previews">
+			<li>
+				<a href="#0" onclick="goToAbout()"><div class="cd-project-title"><h2>2<br>Pownall<br>Road</h2></div></a>
+			</li>
+
+			<li>
+				<a href="#0" onclick="goToBlog()"><div class="cd-project-title"><h2>420<br>Woodbridge<br>Road</h2></div></a>
+			</li>
+			
+			<li>
+				<a href="#0" onclick="goToWork()"><div class="cd-project-title"><h2>21-23<br>Queen<br>Street</h2></div></a>
+			</li>
+			
+			
+		</ul>
+
+		<ul class="cd-projects">
+
+<!-- ABOUT --> 
+			<li>
+				<ng-include src="'./pages/about.html'"></ng-include>
+
+				<div class="preview-image">
+					<div class="cd-project-title"><h2>Bella Napoli</h2></div> 
+				</div>
+
+				<div class="cd-project-info">
+					<center>
+						<h2 class="work-title lime-green">Forage</h2><br>
+
+						<p>System For Living brief encouraged us to look at the fragility of our planet and how we can combat this through design and creative mediums. I looked at how these problems began to hopefully lead me to finding a solution. 
+
+							<br><br>38% of all food is wasted, 6 Billion pounds (lb) Of perfectly edible produce is wasted Every year, and 26% of all vegetables grown are destroyed before they even reach the shops. This worrying information gave me a topic to focus on and I created this webpage to show ten steps to prevent food waste: <a href="http://waste24.s3-website-eu-west-1.amazonaws.com/" target="_blank">Click Here!</a></p><br><br>
+
+						<br><br>
+
+						<img class="selfie-photo" src="http://www.newenglandarbors.com/wp-content/uploads/2014/09/dirt-on-his-hands-wallpapers_28992_1680x1050-1000x625.jpg"><br><br><br>
+
+						<br><br>
+						
+						<p>This then lead me to create a digital cooking book titled; Forage - We all have food in our cupboards and fridge which a perishable, we try and use them but sometimes they go to waste. Instead of letting these go to waste, Forage encourages people to use the left overs you may well have thrown away. For example, I might get home and all I have in the fridge is some broccoli, cream and some fish which all are on the brink of going off. I might have no idea how to combine these together to make a delicious meal, however the Forage data base will have a recipe which contains these ingredients. 
+						<br><br>
+
+						<br><br>
+
+
+
+
+								<h2 class="work-title lime-green">Interface</h2><br><br><br><br>
+
+
+								<img src="./img/typeforage.png"   width="50%"><br><br><br><br><br><br><br><br>
+								<img src="./img/palletforage.png" width="50%">
+
+<br><br><br><br>
+<br><br><br><br>
+
+
+								<h2 class="work-title lime-green">Index & Menu<br><br><br><br>
+
+							<center>
+							<img src="./img/Screen Shot 2017-01-12 at 15.27.45.png" width="15%">
+						
+							<img src="./img/Screen Shot 2017-01-12 at 15.29.34.png" width="15%">
+								<br><br><br><br>
+
+								<h2 class="work-title lime-green">Timeline<br><br>	<br><br>
+								<center>
+							<img src="./img/Screen Shot 2017-01-12 at 14.36.15.png" width="15%">
+								<img src="./img/Screen Shot 2017-01-12 at 14.36.27.png" width="15%">
+							<img src="./img/Screen Shot 2017-01-12 at 14.55.07.png" width="15%">
+						
+
+							<br><br>
+							<img src="./img/Screen Shot 2017-01-12 at 14.36.22.png" width="15%">
+							<img src="./img/Screen Shot 2017-01-12 at 14.36.38.png" width="15%">
+							<img src="./img/Screen Shot 2017-01-12 at 14.55.11.png" width="15%">
+						
+<br><br><br><br>
+								<h2 class="work-title lime-green">About, Tips & Recipe Upload<br><br><br><br>
+<center>
+							<img src="./img/Screen Shot 2017-01-12 at 15.50.55.png" width="15%">
+							<img src="./img/Screen Shot 2017-01-12 at 15.28.43.png" width="15%">
+							<img src="./img/Screen Shot 2017-01-12 at 15.51.11.png" width="15%">
+						
+
+			<br><br><br><br> <h2 class="work-title lime-green">Profile, Personal Recipes & Cookbook<br><br><br><br>	<center> 	
+							<img src="./img/Screen Shot 2017-01-12 at 15.34.41.png" width="15%">
+							<img src="./img/Screen Shot 2017-01-12 at 15.34.47 copy.png" width="15%">
+							<img src="./img/Screen Shot 2017-01-12 at 15.34.52 copy.png" width="15%">
+							<img src="./img/Screen Shot 2017-01-12 at 15.34.55  copy.png" width="15%">
+						
+			<br><br><br><br> <h2 class="work-title lime-green">Site Map<br><br><br><br>
+					
+<center>
+<img width="60%" src="./img/sitemapf.png">
+						
+
+						
+
+<br><br><br><br> <h2 class="work-title lime-green">Demonstration of App<br><br><br><br>
+						<center>
+						<iframe class="yt" src="https://www.youtube.com/embed/r2JktqVsR8o" frameborder="0" width="70%" height="500"></iframe>
+				<br><br><br><br>
+					<p class="center"> Please watch this video to see the working app.
+
+<center>
+<br><br><br><br>
+
+
+<h2 class="work-title lime-green">Rating System<center><br><br><br><br>
+<img src="./img/Screen Shot 2017-01-12 at 23.39.10.png" width="15%"><br><br><br><br>
+
+<p >I had a few other ideas for the rating system like star ratings, but I felt I would take inspiration from Call of Duty and give users badges to encourage regular activity and competitively. Each rank is named in conjunction to the ranking of staff in a kitchen.<center><br><br><br><br>
+
+		<h2 class="work-title lime-green">Marketing</h2><br><br><br><br>
+
+
+
+<img src="./img/sticka.png" width="50%"><br><br><br><br>
+						
+<p>
+<p>
+People who would use Forage inherently like food. To find an audience of people that like food where better to look then restaurants? With the app I will be offering an exclusive deal for Restaurateurs: Instant submission of up to 10 recipes, geographic advertising on the app for their brand for 6 months, if they get a rating over 70% for their recipes they will receive unlimited upload and on the app they will have a certified restaurant mark on their recipes and profiles. They can also place their company logo on their recipe pages. In exchange we will send them a sticker they can place in their window, a discounted price for a new menu design where I will include some information about Forage and the logo. This service not including the menu design will cost £1490 a year however this price will go down to £790 if they place the Forage logo in their window. We offer professional photography of food for an additional £1000. 
+
+<br><br><br><br>
+
+						<img src="http://photos.mandarinoriental.com/is/image/MandarinOriental/milan-fine-dining-mandarin-bar-courtyard-dusk?$GridBanner$&crop=24,1145,4774,1535&anchor=2411,1912" width="100%">
+
+
+
+						<br><br><br><br>
+
+								10% of Forage’s profits will be donated to the charity; This Is Rubbish. This is Rubbish aims to communicate the preventable scale of food wasted in the UK, through policy research, community and arts led public events. Formed in 2009 by volunteers, TiR registered as a Community Interest Company in 2011. The organization now has an extensive portfolio of successful events through England and Wales. 
+
+
+
+<br>
+
+
+<a> <p class="italic"><i>Find Your Inner Chef.</i></p></a><br><br><br>
+
+
+
+
+						<p>To see the development of the app and design process please <a href="http://foragepro.s3-website-eu-west-1.amazonaws.com/" target="_blank">Click Here!</a></p><br><br>
+						
+					
+				</div>
+
+			</li>
+
+<!-- BLOG --> 
+			<li>
+				<!--<ng-include src="'./pages/blog.html'"></ng-include>-->
+
+				<div class="preview-image">
+					<div class="cd-project-title">
+						<h2>Bella Napoli</h2>
+					</div> 
+				</div>
+
+				<div class="cd-project-info">
+
+				
+
+				<h2 class="work-title blog-title">Agile Aging</h2>
+				
+
+				
+
+				<p>Agile Aging was a brief set by the RSA sponsored by Waitrose with a cash prize of £2500. The brief looked at the role of design in addressing some of the complex challenges presented by an aging population. In particular it asks you to address how older people can increase their mental agility, and combat the effects of diseases like Alzheimer's. Currently there are 60,000,000 people worldwide suffering with Dementia. This number is expected to triple in the next 10 years.
+</p>
+<br><br><br><br><center>
+<img src="https://media.giphy.com/media/3o7TKTvwLRXsTdXpJu/giphy.gif" width="50%">
+<br><br><br><br>
+
+				<p>Juno, titled after the Roman Goddess of Memory is a social media site which gives value to memories. Juno lets users upload "posts" in this app they are known as "memories". Every memory has a time period before it fades away, however with endorsements (likes) from the users regularly a memory is more time. Juno is like a Tamagotchi for memories.
+
+
+	
+
+
+				<br><br><br><br><center><br><br><br><br>
+				<img src="./img/timedes.png"  width="80%">
+<br><br><br><br>
+<br><br><br><br>
+<br><br><br><br>
+ <p>The time left on each memory is signified by a colour coding system in correlation to the star temperature spectrum shown bellow. By tapping the endorsement button, time is added to a memory, each tap is a day (There is a daily limit). This encourages the user to revisit their memory bank and to regularly endorse their memories. When a memory is running out of time, the image fades away, eventually to the point where the name fades away: This is called a dying star and the only way to revive one of these is to enter the title of the memory.</p>
+
+<br><br><br><br>
+
+<br><br><br><br>
+
+	<img src="./img/starchart.png"   width="40%">
+
+<br><br><br><br>
+
+<br><br><br><br>
+
+	<img src="./img/timz1.png"   width="25%">
+	<img src="./img/timz3.png"   width="25%">
+	<img src="./img/timz11.png"  width="25%">
+	<img src="./img/timz17.png"  width="25%">
+	<img src="./img/timz20.png"  width="25%"> 
+
+	  <br><br><br><br>
+<br><br><br><br>
+
+<p>Once the memory has completely faded the only way you can save it is by entering the Orb Realm at the location the memory was originally uploaded. The Orb Realm is an augmented reality view of where your memories are saved, this shows where your memories are geographically. Using Google Map's API system each user has a map of all of their memories. In the Orb Realm & Memory Map all users living & dead memories are visible. Any user can view other users memories as an potion on Memory Maps and in the Orb Realm. 
+
+
+<br><br><br><br>	
+Juno - <a>A Piece Of Mind</a>
+
+
+</p>
+
+
+
+<br><br><br><br>	<center><br><br><br><br><iframe height="200" src="./dodec/lumo.html"></iframe>	<br><br><br><br> 	<br><br><br><br>
+
+
+
+<br><br><br><br>
+<br><br><br><br>
+
+
+<p>Bellow is a visual display of the working app. 
+	<br><br><br><br>
+<br><br><br><br><center>
+<iframe width="100%" height="700" src="https://www.youtube.com/embed/-eWUMea_9do" frameborder="0" allowfullscreen></iframe>
+
+
+
+<br><br><br><br>
+<br><br><br><br>
+
+
+						<p>To see the development of the app, the marketing plans and design process please <a href="http://junopro.s3-website-eu-west-1.amazonaws.com/">Click Here!</a>
+			</li>
+
+<!-- WORK --> 
+			<li><ng-include src="'./pages/work.html'"></ng-include></li>
+
+<!-- CODING --> 
+			<li><ng-include src="'./pages/coding.html'"></ng-include></li>
+
+		</ul>
+
+		<button class="scroll cd-text-replace">Scroll</button>
+	</div>
+
+
+	<nav class="cd-primary-nav" id="primary-nav">
+		<ul class="cool">
+			<br><br><br><br><br>
+			<div class="link-menu">
+				<li><a href="#0" class="nav-menu-item turquoiseHover">System 4 Living</a></li>
+				<li><a href="#0" class="nav-menu-item tangerineHover">A New Future</a></li>
+				<li><a href="#0" class="nav-menu-item emeraldHover">Simultaneous Freelance</a></li>
+				<li><a href="#0" class="nav-menu-item honeysuckleHover">Research Report</a></li>
+				<li><a href="http://www.maverickmedia.org.uk/" target="blank" class="nav-menu-item greyHover">Maverick Media</a></li>
+			</div>
+		</ul>
+	</nav>
+
+	
+</div>
+
+<script src="js/main.js"></script>
+
+
+
+
+<script type="text/javascript">
+	
+	function eventFire(el, etype){
+	  if (el.fireEvent) {
+	    el.fireEvent('on' + etype);
+	  } else {
+	    var evObj = document.createEvent('Events');
+	    evObj.initEvent(etype, true, false);
+	    el.dispatchEvent(evObj);
+	  }
+	}
+
+	function clickTitle() {
+		console.log("clickTitle()");
+		eventFire(document.getElementById('hamburger'), 'click');
+	}
+
+	function goToAbout() {
+		console.log("we are on the about page");
+
+		$("#heading-title").addClass("turquoise");
+		$("#hamburger").css("background-color", "#86af48");
+		$("#map-container").css("display", "visible");
+	}
+
+	function goToBlog () {
+		$("#heading-title").addClass("tangerine");
+		$("#hamburger").css("background-color", "#ffffff");
+	}
+
+	function goToWork () {
+		$("#heading-title").addClass("emerald");
+		$("#hamburger").css("background-color", "#e9212d");
+	} 
+
+	function goToCoding () {
+		$("#heading-title").addClass("honeysuckle");
+		$("#hamburger").css("background-color", "#ca457e");
+	} 
+
+	function makeTitleWhite () {
+		$("#heading-title").removeClass().addClass("title-banner");
+		$("#hamburger").css("background-color", "#222");
+		window.scrollTo(0, 0);
+	} 
+
+	/* ANGULAR */
+
+	var myApp = angular.module('myApp',[]);
+
+	myApp.controller('pageController', ['$scope', function($scope) {
+	  console.log('Hola!');
+
+	  $scope.isAbout = false;
+
+	}]);
+
+</script>
+
+
+
+<!-- analytics -->
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-87756054-1', 'auto');
+  ga('send', 'pageview');
+
+</script>
+
+
+
+</body>
+</html>
