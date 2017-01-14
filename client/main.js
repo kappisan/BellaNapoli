@@ -29,9 +29,43 @@ app.controller('homeCtrl', function($scope, $rootScope, $http) {
 
 app.controller('orderCtrl', function($scope, $rootScope, $http) {
     
-    console.log("order controller")
+    console.log("order controller");
+    $rootScope.orderSuccess = false;
+    $rootScope.showError = false;
+    $rootScope.error = "";
+
+    function checkIfComplete() {
+
+        var incomplete = [];
+
+        if(!$rootScope.orderDetails.fullName != "") {
+            incomplete.push("fullName");
+        }
+        if(!$rootScope.orderDetails.address != "") {
+            incomplete.push("address");
+        }
+        if(!$rootScope.orderDetails.postCode != "") {
+            incomplete.push("postCode");
+        }
+        if(!$rootScope.orderDetails.phoneNumber != "") {
+            incomplete.push("phoneNumber");
+        }
+
+        if(incomplete.length == 0) {
+            return true;
+        } else {
+            $rootScope.showError = true;
+            $rootScope.error = "form incomplete";
+            console.log("incomplete", incomplete);
+            return false;  
+        } 
+    }
 
     $scope.submitOrder = function() {
+
+        if(!checkIfComplete()) {
+            return console.log("not submitting order");
+        }
 
         console.log("submitting order for", $scope.fullName);
 
@@ -41,6 +75,8 @@ app.controller('orderCtrl', function($scope, $rootScope, $http) {
                 order: $rootScope.order
             });
         $http.post("/api/makeOrder", data).success(function(data, status) {
+
+            $scope.orderSuccess = true;
 
             console.log("made order", data);
         })
@@ -88,6 +124,13 @@ app.controller('mainCtrl', function($scope, $rootScope) {
     $rootScope.totalItems = 0;
     $rootScope.totalPrice = 0;
     $rootScope.order = [];
+
+    $rootScope.orderDetails = {
+        fullName: "",
+        address: "",
+        postCode: "",
+        phoneNumber: ""
+    }
 
     $rootScope.displayPrice = function(price) {
         return '£' + numeral(price).format('0,0.00')

@@ -18,6 +18,16 @@ app.use(bodyParser.urlencoded({
   extended: true
 }));
 
+/* braintree payments */
+var braintree = require("braintree");
+
+var gateway = braintree.connect({
+  environment: braintree.Environment.Sandbox,
+  merchantId: "useYourMerchantId",
+  publicKey: "useYourPublicKey",
+  privateKey: "useYourPrivateKey"
+});
+
 
 /* this will come from the database */
 var orders = [

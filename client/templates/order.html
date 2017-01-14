@@ -1,5 +1,5 @@
 <!-- if order, show order -->
-<center ng-if="!orderSuccess && totalItems != 0">
+<center ng-show="!orderSuccess && totalItems != 0">
 	<div class="menu-block green-border">
 		<h1>order</h1>
 		<div ng-repeat="item in order">
@@ -12,32 +12,48 @@
 		<h1>Your Details</h1>
 
 		<p class="placeholder">Name:</p> 
-		<input type="text" ng-model="fullName" placeholder="name">
+		<input type="text" ng-model="orderDetails.fullName" placeholder="name">
 		
 		<p class="placeholder">Address:</p> 
-		<input type="text" ng-model="address" placeholder="address">
+		<input type="text" ng-model="orderDetails.address" placeholder="address">
 		
 		<p class="placeholder">Post Code:</p> 
-		<input type="text" ng-model="postCode" placeholder="post code">
+		<input type="text" ng-model="orderDetails.postCode" placeholder="post code">
 		
 		<p class="placeholder">Phone Number:</p> 
-		<input type="text" ng-model="phoneNumber" placeholder="phone number">
+		<input type="text" ng-model="orderDetails.phoneNumber" placeholder="phone number">
 		
 		<br><button ng-click="submitOrder()">Submit Order</button><br>
+
 	</div>
 </center>
 
 <!-- if successfully ordered -->
-<center ng-if="orderSuccess">
+<center ng-show="orderSuccess">
 	<div class="menu-block green-border">
-		<h1>order</h1>
+		<h1>successfully ordered</h1>
 		<div ng-repeat="item in order">
 				<p><strong>{{ displayPrice(item.price / 100) }}</strong> - {{ item.name }} </p>	
 		</div>
 	</div>
+
+	<div class="menu-block red-border">
+		<h1>Details</h1>
+		
+			<p><strong>fullName</strong>: {{ orderDetails.fullName }}</p>
+			<p><strong>address</strong>: {{ orderDetails.address }}</p>
+			<p><strong>postCode</strong>: {{ orderDetails.postCode }}</p>
+			<p><strong>phoneNumber</strong>: {{ orderDetails.phoneNumber }}</p>
+		
+	</div>
+
 </center>
 
 <!-- if order empty -->
-<center ng-if="totalItems == 0">
+<center ng-show="totalItems == 0">
 	<h1>Nothing to order</h1>
+</center>
+
+<center ng-show="showError">
+	<div class="error-message"><p>Error: {{ error }}</p></div>
 </center>

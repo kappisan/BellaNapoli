@@ -38,6 +38,10 @@ button {
     height: 40px;
 }
 
+.cool {
+	font-family: coolvetica;
+}
+
 .my-order {
 	position: relative;
     width: 200px;
@@ -125,4 +129,19 @@ button {
 .placeholder {
     float: left;
     margin: 30px 10px 4px 6px;
+}
+
+.error-message {
+    background-color: #ee1d23;
+    height: 40px;
+    width: 400px;
+    color: #fff;
+    border-radius: 3px;
+    font-weight: bold;
+    vertical-align: middle;
+    margin-bottom: 50px;
+}
+
+.error-message p { 
+	padding-top: 10px;
 }
