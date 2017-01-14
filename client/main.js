@@ -4,9 +4,13 @@ var app = angular.module('bellaNapoliApp', ['ngRoute'])
             .when('/', { templateUrl: 'templates/home.html', controller: "homeCtrl" })  
             .when('/menu', { templateUrl: 'templates/menu.html', controller: "menuCtrl" })
             .when('/order', { templateUrl: 'templates/order.html', controller: "orderCtrl" })
+            .when('/braintree', { templateUrl: 'templates/braintree.html', controller: "braintreeCtrl" })
             .otherwise({ redirectTo: '/' });
     }]);
 
+app.controller('braintreeCtrl', function($scope, $rootScope, $http) {
+    console.log("braintreeCtrl");
+});
 
 app.controller('homeCtrl', function($scope, $rootScope, $http) {
     console.log("home controller")
