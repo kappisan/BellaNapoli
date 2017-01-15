@@ -595,7 +595,7 @@ Projects
   pointer-events: none;
 }
 .cd-projects-previews li {
-  height: 25%;
+  height: 33%;
   width: 100%;
   overflow: hidden;
   -webkit-transition: -webkit-transform 0.5s;
@@ -672,7 +672,7 @@ Projects
   .cd-projects-previews li {
     display: inline-block;
     height: 100%;
-    width: 25%;
+    width: 33%;
     float: left;
   }
   .cd-projects-previews li.selected {
