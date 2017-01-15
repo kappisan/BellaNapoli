@@ -26,7 +26,7 @@ p {text-align: left; font-size: 12pt; font-family: sans-serif; color: #d6d5da;}
 
 /* color scheme */
 /*
-#86af48 - gold
+#169c78 - gold
 #ffffff - tangerine tango
 #e9212d - emerald
 #ca457e - honeysuckle
@@ -34,7 +34,7 @@ p {text-align: left; font-size: 12pt; font-family: sans-serif; color: #d6d5da;}
 
 .turquoise,
 .turquoiseHover:hover {
-  color: #86af48;
+  color: #169c78;
 }
 .tangerine,
 .tangerineHover:hover {
@@ -50,7 +50,7 @@ p {text-align: left; font-size: 12pt; font-family: sans-serif; color: #d6d5da;}
 }
 
 .turquoiseBG {
-  background-color: #86af48;
+  background-color: #169c78;
 }
 .tangerineBG {
   background-color: #ffffff;
@@ -83,7 +83,7 @@ li {
 }
 
 .lime-green {
-  color: #86af48;
+  color: #169c78;
 }
 
 .code-pre {
@@ -386,11 +386,11 @@ a {
     }
 
     @-webkit-keyframes colorPulse {
-        0%  {color: #86af48;}
+        0%  {color: #169c78;}
         25% {color: #ffffff;}
         50% {color: #ca457e;}
         75% {color: #e9212d;}
-      100%  {color: #86af48;}
+      100%  {color: #169c78;}
     }
 
   a  {
@@ -765,12 +765,6 @@ Projects
   background:  #e7d5a4 url(http://images.ansharphoto.com/2016/014-Roman-Forum-Foro-Romano-in-the-Morning-Rome-Italy.jpg) no-repeat center center;
   background-size: cover;
 
-        -moz-transform: scaleX(-1);
-        -o-transform: scaleX(-1);
-        -webkit-transform: scaleX(-1);
-        transform: scaleX(-1);
-        filter: FlipH;
-        -ms-filter: "FlipH";
 
 }
 
