@@ -750,20 +750,28 @@ Projects
 .cd-projects-previews a,
 .cd-projects .preview-image {
   /* set a background image for each project */
-  background: #5b927d url(http://www.siciclando.com/wp-content/uploads/2014/11/523969839.jpg) no-repeat center center;
+  background: #5b927d url(http://qadmoustours.com/portals/0/countries%20rooms/Italy/pizza-tower-tower-pizza-night-landscape-768x1280.jpg) no-repeat center center;
   background-size: cover;
 }
 
 .cd-projects-previews li:nth-of-type(2) a,
 .cd-projects > li:nth-of-type(2) .preview-image {
-  background: #a8ae7e url(http://4.bp.blogspot.com/-glv8OxOzPps/VP2lqhYcwiI/AAAAAAAAEyQ/vH5yw2WVevw/s1600/Venice%2BCanals%2Band%2BScenery-30.jpg) no-repeat center center;
+  background: #a8ae7e url(https://wallpaperscraft.com/image/venice_italy_canal_water_buildings_gondolas_58518_1920x1080.jpg) no-repeat center center;
   background-size: cover;
 }
 
 .cd-projects-previews li:nth-of-type(3) a,
 .cd-projects > li:nth-of-type(3) .preview-image {
-  background: #e7d5a4 url(http://wallpapercave.com/wp/AIJmfUU.jpg) no-repeat center center;
+  background:  #e7d5a4 url(http://images.ansharphoto.com/2016/014-Roman-Forum-Foro-Romano-in-the-Morning-Rome-Italy.jpg) no-repeat center center;
   background-size: cover;
+
+        -moz-transform: scaleX(-1);
+        -o-transform: scaleX(-1);
+        -webkit-transform: scaleX(-1);
+        transform: scaleX(-1);
+        filter: FlipH;
+        -ms-filter: "FlipH";
+
 }
 
 
@@ -784,7 +792,7 @@ Projects
   text-align: center;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  background-color: rgba(211, 211, 211, 0.4);
+
 }
 
 }
