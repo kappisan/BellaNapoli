@@ -750,19 +750,19 @@ Projects
 .cd-projects-previews a,
 .cd-projects .preview-image {
   /* set a background image for each project */
-  background: #5b927d url(http://qadmoustours.com/portals/0/countries%20rooms/Italy/pizza-tower-tower-pizza-night-landscape-768x1280.jpg) no-repeat center center;
+  background: #5b927d url(./img/pasta1.png) no-repeat center center;
   background-size: cover;
 }
 
 .cd-projects-previews li:nth-of-type(2) a,
 .cd-projects > li:nth-of-type(2) .preview-image {
-  background: #a8ae7e url(https://wallpaperscraft.com/image/venice_italy_canal_water_buildings_gondolas_58518_1920x1080.jpg) no-repeat center center;
+  background: url(./img/pasta2.png) no-repeat center center;
   background-size: cover;
 }
 
 .cd-projects-previews li:nth-of-type(3) a,
 .cd-projects > li:nth-of-type(3) .preview-image {
-  background:  #e7d5a4 url(http://images.ansharphoto.com/2016/014-Roman-Forum-Foro-Romano-in-the-Morning-Rome-Italy.jpg) no-repeat center center;
+  background:  #e7d5a4 url(http://christinascucina.com/wp-content/uploads/2013/06/IMG_2243.jpg) no-repeat center center;
   background-size: cover;
 
 
