@@ -71,10 +71,10 @@ app.controller('orderCtrl', function($scope, $rootScope, $http) {
             return console.log("not submitting order");
         }
 
-        console.log("submitting order for", $scope.fullName);
+        console.log("submitting order for", $scope.orderDetails);
 
         var data = JSON.stringify({
-                user: $scope.fullName,
+                user: $scope.orderDetails,
                 pizza: "pizza",
                 order: $rootScope.order
             });

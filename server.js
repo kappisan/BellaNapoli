@@ -197,11 +197,12 @@ app.post('/api/makeOrder', function(req, res) {
 	var now = moment();
 
 	console.log("now", now);
+	console.log("user", req.body);
 	console.log("user", req.body.user);
 	console.log("order ", req.body.order);
 
 	orders.push({ 
-		user: req.body.user, 
+		user: req.body.user.fullName, 
 		order: req.body.order,
 		date: now.format("DD-MMM-YYYY"),
 		time: now.format("hh:mm:ss"),
