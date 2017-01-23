@@ -9,9 +9,9 @@ svg {
 
 .center {text-align: center!important;}
 
-.black-background {background-color: #2c272d;}
-.black-background2 {background-color: #2c272d; width: 25%;}
-p {text-align: left; font-size: 12pt; font-family: sans-serif; color: #d6d5da;}
+.black-background {background-color: #ffffff;}
+.black-background2 {background-color: #ffffff; width: 25%;}
+p {text-align: center!important; font-size: 12pt; font-family: sans-serif; color:#838488;}
 
 .wideboy {width: 100%!important; position: absolute; top: -170px; font-size: 70px!important; width: 200%!important; left:-160px;}
 
@@ -23,10 +23,17 @@ p {text-align: left; font-size: 12pt; font-family: sans-serif; color: #d6d5da;}
     right: 30px;
 }
 
+.title-wood {text-align: center; font-size: 50pt; color: #074929;}
+
+.title-queen {text-align: center; font-size: 50pt; color: #000000;}
+
+.title-pown {text-align: center; font-size: 50pt; color: #e9212d;}
+
+
 
 /* color scheme */
 /*
-#169c78 - gold
+#074929 - gold
 #ffffff - tangerine tango
 #e9212d - emerald
 #ca457e - honeysuckle
@@ -34,7 +41,7 @@ p {text-align: left; font-size: 12pt; font-family: sans-serif; color: #d6d5da;}
 
 .turquoise,
 .turquoiseHover:hover {
-  color: #169c78;
+  color: #074929;
 }
 .tangerine,
 .tangerineHover:hover {
@@ -50,7 +57,7 @@ p {text-align: left; font-size: 12pt; font-family: sans-serif; color: #d6d5da;}
 }
 
 .turquoiseBG {
-  background-color: #169c78;
+  background-color: #074929;
 }
 .tangerineBG {
   background-color: #ffffff;
@@ -83,7 +90,7 @@ li {
 }
 
 .lime-green {
-  color: #169c78;
+  color: #074929;
 }
 
 .code-pre {
@@ -97,7 +104,7 @@ li {
 }
 
 .map-legend-text {
-  fill: #2c272d;
+  fill: #ffffff;
 }
 
 #ba3 {position: fixed;      left: 265px!important;}
@@ -109,15 +116,16 @@ li {
     font-size: 33px;
     z-index: 4;
     position: fixed;
-    background-color: #000000;
+    background-color: #ffffff;
     width: 100%;
+
   
 }
 
-.title-bar-heading {position: fixed;left: 70px; top: 10px;}
+.title-bar-heading {position: fixed;left: 70px; top: 10px; color: #000000;}
 
 .blog-date {
-    color: #2c272d;
+    color: #ffffff;
     font-family: coolvetica;
     margin: 2px 40px 2px 40px;
     font-size: 20pt;
@@ -386,11 +394,11 @@ a {
     }
 
     @-webkit-keyframes colorPulse {
-        0%  {color: #169c78;}
+        0%  {color: #074929;}
         25% {color: #ffffff;}
         50% {color: #ca457e;}
         75% {color: #e9212d;}
-      100%  {color: #169c78;}
+      100%  {color: #074929;}
     }
 
   a  {
@@ -750,19 +758,19 @@ Projects
 .cd-projects-previews a,
 .cd-projects .preview-image {
   /* set a background image for each project */
-  background: #5b927d url(http://cdn.jamieoliver.com/recipe-database/xtra_med/CaIW2UumqP89ZYr1_w6MRF.jpg) no-repeat center center;
+  background: #5b927d url(http://i.huffpost.com/gen/1359234/images/o-CHILE-VINEYARDS-facebook.jpg) no-repeat center center;
   background-size: cover;
 }
 
 .cd-projects-previews li:nth-of-type(2) a,
 .cd-projects > li:nth-of-type(2) .preview-image {
-  background: url(http://lilluna.com/wp-content/uploads/2014/08/creamy-garlic-penne-pasta-3.jpg) no-repeat center center;
+  background: url(https://www.trevifountain.net/images/trevifountain.jpg) no-repeat center center;
   background-size: cover;
 }
 
 .cd-projects-previews li:nth-of-type(3) a,
 .cd-projects > li:nth-of-type(3) .preview-image {
-  background:  #e7d5a4 url(http://christinascucina.com/wp-content/uploads/2013/06/IMG_2243.jpg) no-repeat center center;
+  background:  #e7d5a4 url(http://st.gde-fon.com/wallpapers_original/582446_manarola_cinque-terre_italy_3872x2592_www.Gde-Fon.com.jpg) no-repeat center center;
   background-size: cover;
 
 
@@ -950,7 +958,7 @@ li.selected .cd-project-title,
 .cd-project-info {
   display: none;
   padding: 4em 0;
-  background-color: #2c272d;
+  background-color: #ffffff;
   color: #dddddd;
 }
 .content-visible .cd-project-info {
