@@ -7,11 +7,17 @@ svg {
   display: block;
 }
 
+
+.sign {color:#838488; text-align: center!important;}
+
 .center {text-align: center!important;}
 
 .black-background {background-color: #ffffff;}
 .black-background2 {background-color: #ffffff; width: 25%;}
-p {text-align: center!important; font-size: 12pt; font-family: sans-serif; color:#838488;}
+p {font-size: 12pt; font-family: sans-serif; color:#838488;}
+
+.left {text-align: left}
+.ital {font-style: italic;}
 
 .wideboy {width: 100%!important; position: absolute; top: -170px; font-size: 70px!important; width: 200%!important; left:-160px;}
 
@@ -23,11 +29,11 @@ p {text-align: center!important; font-size: 12pt; font-family: sans-serif; color
     right: 30px;
 }
 
-.title-wood {text-align: center; font-size: 50pt; color: #074929;}
+.title-wood {text-align: center; font-size: 35pt; color: #074929;}
 
-.title-queen {text-align: center; font-size: 50pt; color: #000000;}
+.title-queen {text-align: center; font-size: 35pt; color: #000000;}
 
-.title-pown {text-align: center; font-size: 50pt; color: #e9212d;}
+.title-pown {text-align: center; font-size: 35pt; color: #e9212d;}
 
 
 
@@ -38,7 +44,7 @@ p {text-align: center!important; font-size: 12pt; font-family: sans-serif; color
 }
 .tangerine,
 .tangerineHover:hover {
-  color: #ffffff;
+  color: #838488;
 }
 .emerald,
 .emeraldHover:hover {
@@ -53,7 +59,7 @@ p {text-align: center!important; font-size: 12pt; font-family: sans-serif; color
   background-color: #074929;
 }
 .tangerineBG {
-  background-color: #ffffff;
+  background-color: #d6d7d1;
 }
 .emeraldBG {
   background-color: #e9212d;
@@ -111,7 +117,6 @@ li {
     position: fixed;
     background-color: #ffffff;
     width: 100%;
-
   
 }
 
@@ -152,7 +157,7 @@ body {
 .italic {font-style: italic; font-size: 12pt;}
 
 a {
-       color: #ffffff;
+       color: #838488;
  
   text-decoration: none;
 }
@@ -160,7 +165,7 @@ a {
 
   a:hover  {
  
-  color:#074929!important;
+  color:#e9212d!important;
 }
 
 h2 {
@@ -525,11 +530,46 @@ Projects
 
 .cd-projects-previews li:nth-of-type(3) a,
 .cd-projects > li:nth-of-type(3) .preview-image {
-  background:  #e7d5a4 url(http://st.gde-fon.com/wallpapers_original/582446_manarola_cinque-terre_italy_3872x2592_www.Gde-Fon.com.jpg) no-repeat center center;
+  background:  url("/img/italy1.jpg") no-repeat center center;
   background-size: cover;
 
 
 }
+
+.parallax2 { /* The image used */background-image: url("http://foodtv.co.nz/wp-content/uploads/2016/10/Jamie-Oliver-S02E03-smoked-mackerel-carbonara.jpg");
+
+
+    min-height: 500px;
+    width: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 100%;}     
+
+
+
+
+
+
+.parallax1 { /* The image used */background-image: url("http://www.jamieoliver.com/news-and-features/features/wp-content/uploads/sites/2/2015/04/feature-header6.jpg");
+
+
+    min-height: 500px;
+    width: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 100%;}     
+
+.parallax3 { /* The image used */background-image: url("http://assets.simplyrecipes.com/wp-content/uploads/2010/04/shrimp-risotto.jpg");
+
+
+    min-height: 500px;
+    width: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 100%;}     
+
+
+
 
 
 .cd-project-title {
