@@ -158,7 +158,7 @@ body {
 
 a {
        color: #838488;
- 
+   z-index: 9;
   text-decoration: none;
 }
 
@@ -538,13 +538,13 @@ Projects
 
 }
 
+.remove-zed {position: absolute; top: 0px; z-index: -1; opacity: 0; width: 33%; right: 1%; height: 0%;}
 
+#bellaright {position: absolute; top: 0px; z-index: 2; opacity: 0; width: 33%; right: 1%; height: 100%;}
 
-.bellaright {position: absolute; top: 0px; z-index: 2; opacity: 0; width: 33%; right: 1%; height: 100%;}
+#bellaright:hover { opacity: .9;}
 
-.bellaright:hover { opacity: .9;}
-
-.bellaright:active { z-index: 0;}
+#bellaright:active { z-index: 0;}
 
 
 .bellacenter {position: absolute; top: 0px; z-index: 2; opacity: 0; width: 33%; left: 33%; height: 100%;}
