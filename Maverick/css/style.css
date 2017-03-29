@@ -29,9 +29,11 @@ p {font-size: 12pt; font-family: sans-serif; color:#838488;}
     right: 30px;
 }
 
+
+
 .title-wood {text-align: center; font-size: 35pt; color: #074929;}
 
-.title-queen {text-align: center; font-size: 35pt; color: #000000;}
+.title-queen {text-align: center; font-size: 35pt; color: #074929;}
 
 .title-pown {text-align: center; font-size: 35pt; color: #e9212d;}
 
@@ -538,26 +540,26 @@ Projects
 
 }
 
-.remove-zed {position: absolute; top: 0px; z-index: -1; opacity: 0; width: 33%; right: 1%; height: 0%;}
 
-#bellaright {position: absolute; top: 0px; z-index: 2; opacity: 0; width: 33%; right: 1%; height: 100%;}
+
+#bellaright {position: absolute; top: 0px; z-index: 2; opacity: 0; width: 33%; right: 0%; height: 100%;  right: 1%;}
 
 #bellaright:hover { opacity: .9;}
 
-#bellaright:active { z-index: 0;}
-
-
-.bellacenter {position: absolute; top: 0px; z-index: 2; opacity: 0; width: 33%; left: 33%; height: 100%;}
-
-.bellacenter:hover { opacity: .9;}
-.bellacenter:active { z-index: 0;}
 
 
 
-.bellaleft {position: absolute; top: 0px; z-index: 2; opacity: 0; width: 33%; height: 100%;}
+#bellacenter {position: absolute; top: 0px; z-index: 2; opacity: 0; width: 33%; left: 33%; height: 100%;}
 
-.bellaleft:hover { opacity: .9;}
-.bellaleft:active { z-index: 0;}
+#bellacenter:hover { opacity: .9;}
+
+
+
+
+#bellaleft {position: absolute; top: 0px; z-index: 2; opacity: 0; width: 33%; height: 100%;}
+
+#bellaleft:hover { opacity: .9;}
+
 
 
 

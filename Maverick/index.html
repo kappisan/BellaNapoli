@@ -69,11 +69,11 @@
 
 
 
-<a  onclick="changeZed()"><img src="./img/bella1266653.jpg" id="bellaright"></a>
+<img onclick="changeZed()" src="./img/bella1266653.jpg" id="bellaright">
 
-<img src="./img/bella12553.jpg" class="bellacenter">
+<img onclick="changeZed2()" src="./img/bella12553.jpg" id="bellacenter">
 
-<img src="./img/bella12343.jpg" class="bellaleft">
+<img onclick="changeZed3()" src="./img/bella12343.jpg" id="bellaleft">
 
 
 		<ul class="cd-projects">
@@ -87,7 +87,7 @@
 				</div>
 
 
-				<div class="cd-project-info"><h2 class="title-pown"><br>Pownall Road<br>01473 288916<br><br>
+				<div class="cd-project-info"><h2 class="title-queen"><br>Pownall Road<br>01473 288916<br><br>
 <br>
 <br>
 
@@ -143,8 +143,22 @@ Italian ambiance.<br><br>
 					
 					</div> 		</div> 	
 				
-				<div class="cd-project-info"><h2 class="title-wood"><br>Woodbridge Road<br>01473 727173<br><br>
+				<div class="cd-project-info"><h2 class="title-queen"><br>Woodbridge Road<br>01473 727173<br><br>
 				<p class="left">With over 20 years of experience, Bella Napoli showcases traditional Italian cooking using freshly sourced ingredients of the highest standards.
+
+					<br>
+<br>
+<br>
+<br><center>
+<img src="./img/illa.png" width = "40%">
+<br>
+<br>
+<br>
+<br>
+		<p class="ital"> 				
+
+
+
 
 We provide an extensive choice of foods which include pizza, pasta, risotto and specialities for all the family and for every occasion.
 Bella Napoli ensures a great experience with a great choice at the best price, along with a friendly and likable
@@ -190,8 +204,19 @@ Italian ambiance.<br><br>
 					</div> 		</div> 	
 				
 
-				<div class="cd-project-info"><h2 class="title-queen"><br>Queen Street<br>01473 221555<br><br>
+				<div class="cd-project-info"><h2 class="title-pown"><br>Queen Street<br>01473 221555<br><br>
 				<p class="left">With over 20 years of experience, Bella Napoli showcases traditional Italian cooking using freshly sourced ingredients of the highest standards.
+
+<br>
+<br>
+<br>
+<br><center>
+<img src="https://scontent-lhr3-1.xx.fbcdn.net/v/t35.0-12/17522512_1170686949727512_474936204_o.jpg?oh=94e2618884df332c2c971ef9a5a0580b&oe=58DCB208" width = "40%">
+<br>
+<br>
+<br>
+<br>
+		<p class="ital"> 				
 
 We provide an extensive choice of foods which include pizza, pasta, risotto and specialities for all the family and for every occasion.
 Bella Napoli ensures a great experience with a great choice at the best price, along with a friendly and likable
@@ -299,7 +324,26 @@ Italian ambiance.<br><br>
 
 		function changeZed () {
 		$("#bellaright").show()
-$("#bellaright").hide()
+		$("#bellaright").hide()
+		$("#bellaleft").hide()
+		$("#bellacenter").hide()
+	} 
+
+
+
+			function changeZed2 () {
+		$("#bellacenter").show()
+		$("#bellaright").hide()
+		$("#bellaleft").hide()
+		$("#bellacenter").hide()
+	} 
+
+
+			function changeZed3 () {
+		$("#bellaleft").show()
+		$("#bellaright").hide()
+		$("#bellaleft").hide()
+		$("#bellacenter").hide()
 	} 
 
 	/* ANGULAR */
